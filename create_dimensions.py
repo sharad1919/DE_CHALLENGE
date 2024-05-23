@@ -16,16 +16,16 @@ def create_dimension():
                             create or replace table IPL_DB.IPL_INFO.teams as
                             select distinct TEAM1 from IPL_DB.IPL_INFO.matches"""
                             
-        sql_create_venue_dimension = f"""
+        sql_create_city_dimension = f"""
                             create or replace table IPL_DB.IPL_INFO.cities as
-                            select distinct TEAM1 from IPL_DB.IPL_INFO.matches"""
+                            select distinct city from IPL_DB.IPL_INFO.matches"""
         
         sql_create_venue_dimension = f"""
                             create or replace table IPL_DB.IPL_INFO.venues as
-                            select distinct TEAM1 from IPL_DB.IPL_INFO.matches"""
+                            select distinct venue from IPL_DB.IPL_INFO.matches"""
         
         dbsa.execute_sql(sql_create_team_dimension)
-        dbsa.execute_sql(sql_create_venue_dimension)
+        dbsa.execute_sql(sql_create_city_dimension)
         dbsa.execute_sql(sql_create_venue_dimension)
         
         return "dimensions created successfully"
