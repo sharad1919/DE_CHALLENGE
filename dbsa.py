@@ -16,9 +16,9 @@ from configparser import ConfigParser
 # Snowflake Credentials
 
 ctx = connect(
-    user='SHARADBHARDWAJ',
+    user='XXXXXXX',
     password='Sharad123#',
-    account='nhdmegu-te99629',
+    account='XXXXX',
     database='IPL_DB',
     schema='IPL_INFO',
     warehouse='COMPUTE_WH',
